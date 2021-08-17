@@ -26,7 +26,7 @@
                 </div>
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">{{ trans('homepage.home') }}</a>
-                    <a class="no-underline hover:underline" href="/blogs">{{ trans('homepage.blog') }}</a>
+                    <a class="no-underline hover:underline" href="{{ route('blogs.index') }}">{{ trans('homepage.blog') }}</a>
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
@@ -42,7 +42,9 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
-                    @endguest
+                    @endguest  |
+                    <a class="no-underline hover:underline" href="{{ route('language.index',['en']) }}">en</a>
+                    <a class="no-underline hover:underline" href="{{ route('language.index',['vi']) }}">vi</a>
                 </nav>
             </div>
         </header>

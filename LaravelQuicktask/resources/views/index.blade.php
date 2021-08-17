@@ -6,7 +6,7 @@
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
                     {{ trans('homepage.title') }}
                 </h1>
-                <a href="/blogs" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase ">
+                <a href="{{ route('blogs.index') }}" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase ">
                     {{ trans('homepage.redirect_blog_button') }}
                 </a>
             </div>
@@ -27,9 +27,8 @@
                 {{ trans('homepage.post_description') }}
             </p>
 
-            <a href="/blogs" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+            <a href="{{ route('blogs.index') }}" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
             {{ trans('homepage.find_out_more_button') }}</a>
         </div>
     </div>
 @endsection
-
