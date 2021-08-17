@@ -3,3 +3,12 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.background-image {
+    background-image: url(../../public/storage/image/blog-3.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:  fixed;
+    background-size: cover;
+    height: 500px
+}
