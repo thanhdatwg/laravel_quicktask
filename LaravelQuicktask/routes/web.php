@@ -22,3 +22,4 @@ Route::resource('blogs', PostsController::class);
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('language/{locale}', 'App\Http\Controllers\LanguageController@index')->name('language.index');
